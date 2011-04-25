@@ -38,5 +38,10 @@ module Existential
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    #Configure a generator for specs
+    config.generators do |generator|
+      generator.test_framework :rspec
+    end
   end
 end
