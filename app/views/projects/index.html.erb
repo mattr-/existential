@@ -1,0 +1,24 @@
+<h1>Projects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.name %></td>
+    <td><%= project.description %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td>|</td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+<%= link_to 'New project', new_project_path %>
+
